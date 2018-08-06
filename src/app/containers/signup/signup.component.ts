@@ -8,9 +8,9 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
   
-  email :FormControl  = new FormControl('', [Validators.required, Validators.email]);
+  email :FormControl    = new FormControl('', [Validators.required, Validators.email]);
   password: FormControl = new FormControl('', [Validators.required]);
-  hide  :boolean      = true;
+  hide  :boolean        = true;
 
   constructor() { }
 
@@ -22,7 +22,10 @@ export class SignupComponent implements OnInit {
 
   onSubmt(form: any): void { 
     console.log(`Email: ${this.email.value} Pass: ${this.password.value}`);
+  }
 
+  isDisabled(): boolean {
+    return this.email.value;
   }
 
   ngOnInit() {

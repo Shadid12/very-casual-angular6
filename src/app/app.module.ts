@@ -13,6 +13,7 @@ import {  MatToolbarModule,
           MatListModule, 
           MatCardModule 
         } from '@angular/material';
+import { CommonModule } from '@angular/common';
   
 
 
@@ -28,7 +29,8 @@ import {  MatToolbarModule,
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
